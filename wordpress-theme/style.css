@@ -1,0 +1,581 @@
+/*
+Theme Name: iaivan AI Management
+Theme URI: https://iaivan.com
+Author: iaivan
+Author URI: https://iaivan.com
+Description: Tema moderno de IA con diseño oscuro futurista y efectos de neón cyan. Totalmente personalizable desde el panel de WordPress.
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: iaivan
+Tags: dark, modern, ai, technology, customizable
+*/
+
+/* Variables CSS más robustas y colores forzados */
+:root {
+  --deep-navy: #0a0e27;
+  --navy-dark: #060913;
+  --cyan-accent: #06b6d4;
+  --neutral-dark: #1a1d2e;
+  --neutral-medium: #4a5568;
+  --neutral-light: #cbd5e0;
+}
+
+/* Reset completo y forzar estilos oscuros */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: #060913 !important;
+}
+
+body,
+body.home,
+body.page,
+.site,
+#page {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  background: linear-gradient(to bottom, #0a0e27, #060913) !important;
+  color: white !important;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Sobrescribir estilos de WordPress */
+.site-content,
+.entry-content,
+article {
+  background: transparent !important;
+  color: white !important;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header estilos */
+.site-header {
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10, 14, 39, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 20px rgba(6, 182, 212, 0.6));
+}
+
+.logo-text h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.logo-text p {
+  font-size: 0.75rem;
+  color: var(--cyan-accent);
+  margin: 0;
+}
+
+.main-navigation ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+}
+
+.main-navigation a {
+  color: var(--neutral-light);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.3s;
+}
+
+.main-navigation a:hover {
+  color: var(--cyan-accent);
+}
+
+.cta-button {
+  background: var(--cyan-accent);
+  color: var(--deep-navy);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.cta-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Sección Solución Integral */
+.ai-solution-section {
+  padding: 80px 20px;
+  position: relative;
+}
+
+.ai-solution-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solution-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.solution-content p {
+  font-size: 1.125rem;
+  color: var(--neutral-light);
+  margin-bottom: 30px;
+}
+
+.brain-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brain-icon {
+  width: 300px;
+  height: 300px;
+  filter: drop-shadow(0 0 60px rgba(6, 182, 212, 1));
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+/* Sección Hero con Dispositivos */
+.hero-section {
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 20px rgba(6, 182, 212, 0.6));
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--cyan-accent);
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+/* Asegurar que los dispositivos se muestren correctamente */
+.devices-showcase {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 400px;
+}
+
+.device {
+  border-radius: 20px;
+  border: 2px solid rgba(74, 85, 104, 0.5) !important;
+  background: linear-gradient(135deg, #1a1d2e, rgba(74, 85, 104, 0.3)) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+  position: relative;
+}
+
+.phone-device {
+  width: 140px !important;
+  height: 280px !important;
+  border-radius: 32px;
+  padding: 8px;
+  animation: float 3.5s ease-in-out infinite;
+}
+
+.phone-left {
+  transform: rotate(-8deg);
+  z-index: 20;
+}
+
+.phone-right {
+  transform: rotate(8deg);
+  z-index: 20;
+  margin-left: -140px !important;
+}
+
+.laptop-device {
+  width: 440px !important;
+  height: 280px !important;
+  border-radius: 12px;
+  padding: 12px;
+  z-index: 10;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.device-screen {
+  width: 100%;
+  height: 100%;
+  background: #0a0e27 !important;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Iconos SVG con filtros para efecto cyan brillante */
+.device-brain svg,
+.logo-icon svg,
+.brain-icon svg {
+  filter: drop-shadow(0 0 20px rgba(6, 182, 212, 0.8)) !important;
+  color: #06b6d4 !important;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.device-text {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.device-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.device-text p {
+  font-size: 0.875rem;
+  color: var(--cyan-accent);
+}
+
+/* Sección de Servicios */
+.services-section {
+  padding: 80px 20px;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.services-header p {
+  font-size: 1.125rem;
+  color: var(--neutral-light);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Tarjetas de servicio con fondo oscuro forzado */
+.service-card {
+  background: linear-gradient(135deg, rgba(26, 29, 46, 0.8), rgba(10, 14, 39, 0.8)) !important;
+  border: 1px solid rgba(74, 85, 104, 0.3) !important;
+  border-radius: 12px;
+  padding: 40px;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.service-card:hover {
+  border-color: rgba(6, 182, 212, 0.5) !important;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.2) !important;
+  transform: translateY(-5px);
+}
+
+.service-card.featured {
+  border-color: rgba(6, 182, 212, 0.6) !important;
+  box-shadow: 0 0 30px rgba(6, 182, 212, 0.4) !important;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(10, 14, 39, 0.8)) !important;
+}
+
+/* Asegurar badge cyan visible */
+.service-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #06b6d4 !important;
+  color: #0a0e27 !important;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Iconos de servicio con fondo cyan */
+.service-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(6, 182, 212, 0.1) !important;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.service-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #06b6d4 !important;
+  stroke: #06b6d4 !important;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #06b6d4 !important;
+  color: white !important;
+}
+
+.service-price {
+  font-size: 0.875rem;
+  color: #06b6d4 !important;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  color: #cbd5e0 !important;
+  margin-bottom: 30px;
+}
+
+.service-features {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.service-features li {
+  color: #cbd5e0 !important;
+  font-size: 0.875rem;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.service-features li::before {
+  content: "✓";
+  color: #06b6d4 !important;
+  font-weight: bold;
+}
+
+.service-button {
+  width: 100%;
+  padding: 12px;
+  background: transparent !important;
+  border: 1px solid #06b6d4 !important;
+  color: #06b6d4 !important;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.service-button:hover {
+  background: #06b6d4 !important;
+  color: #0a0e27 !important;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid rgba(74, 85, 104, 0.3);
+  background: rgba(10, 14, 39, 0.8);
+  padding: 50px 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo svg {
+  width: 32px;
+  height: 32px;
+  color: var(--cyan-accent);
+}
+
+.footer-logo span {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: var(--neutral-light);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: var(--cyan-accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(74, 85, 104, 0.3);
+}
+
+.footer-bottom p {
+  color: var(--neutral-medium);
+  font-size: 0.875rem;
+}
+
+/* Responsive mejorado */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .main-navigation ul {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .ai-solution-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 2rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem !important;
+  }
+
+  .devices-showcase {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .phone-left,
+  .phone-right {
+    transform: rotate(0) !important;
+    margin-left: 0 !important;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-nav {
+    justify-content: center;
+  }
+}
